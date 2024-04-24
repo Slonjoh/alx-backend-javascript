@@ -1,10 +1,10 @@
-export default function handleResponseFromAPI(promise) {
-  const body = { status: 200, body: 'success' };
+import { uploadPhoto, createUser } from './utils';
 
-  return promise
-    .then(() => body)
-    .catch(() => new Error())
-    .finally(() => {
-      console.log('Got a response from the API');
-    });
+export default function handleProfileSignup() {
+  return Promise
+    .all([uploadPhoto(), createUser()])
+    .then((res) => {
+      console.log(`${res[0].body} ${res[1].firstName} ${res[1].lastName}`);
+    })
+    .catch(() => console.log('Signup system offline'));
 }
