@@ -1,11 +1,6 @@
-const getListStudentIds = (students) => {
-  /*Return an empty array if the input is not an array*/
-  if (!Array.isArray(students)) {
-    return [];
+export default function getListStudentIds(students) {
+  if (Array.isArray(students)) {
+    return students.map((items) => items.id);
   }
-
-  /*Use map to return an array of ids from the array of student objects*/
-  return students.map(student => student.id);
+  return [];
 }
-
-export default getListStudentIds;

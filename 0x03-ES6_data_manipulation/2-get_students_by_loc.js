@@ -1,9 +1,6 @@
-const getStudentsByLocation = (students, city) => {
-  if (!Array.isArray(students)) {
-    return [];
+export default function getStudentsByLocation(students, city) {
+  if (Array.isArray(students)) {
+    return students.filter((items) => items.location === city);
   }
-  /*Use filter to get only the students located in the specified city*/
-  return students.filter(student => student.location === city);
+  return [];
 }
-
-export default getStudentsByLocation;
