@@ -1,4 +1,4 @@
-const getListStudentIds(students) {
+const getListStudentIds = (students) => {
   /*Return an empty array if the input is not an array*/
   if (!Array.isArray(students)) {
     return [];

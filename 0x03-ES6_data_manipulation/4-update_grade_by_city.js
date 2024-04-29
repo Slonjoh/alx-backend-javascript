@@ -1,4 +1,7 @@
-function updateStudentGradeByCity(students, city, newGrades) {
+const updateStudentGradeByCity = (students, city, newGrades = []) => {
+  if (!Array.isArray(students)) {
+    return []; // If not an array, return an empty array
+  }
   /*Filter students by city*/
   const cityStudents = students.filter(student => student.location === city);
 
