@@ -1,4 +1,4 @@
-function getListStudents() {
+const getListStudents() {
   /*Return an array of student objects*/
   return [
     { id: 1, firstName: 'Guillaume', location: 'San Francisco' },
