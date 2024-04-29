@@ -4,5 +4,4 @@ const getListStudents = () => [
     { id: 5, firstName: 'Serena', location: 'San Francisco' },
   ];
 
-/*Export the function*/
 export default getListStudents;
